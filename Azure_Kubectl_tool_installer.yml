@@ -1,0 +1,12 @@
+# Kubectl tool installer v0
+# Install Kubectl on agent machine.
+
+parameters:
+- name: 'kubectlVersion'
+  type: string    
+  default: 'latest'
+
+steps:
+- task: KubectlInstaller@0
+  inputs:
+    kubectlVersion: '${{parameters.kubectlVersion}}' 
